@@ -16,7 +16,7 @@ npx -y github:Agentchengfeng/chengfeng-videocut-cut#v0.1.0-beta.1 install --host
 npx -y github:Agentchengfeng/chengfeng-videocut-cut#v0.1.0-beta.1 doctor --host codex
 ```
 
-The default target is your user home. For an isolated test, create an empty directory first and append `--target-root "<existing-test-directory>"` to all three commands. Omit `--host codex` to install only the neutral Agent directory. A full commit SHA can replace the tag for immutable retrieval.
+The default target is your user home. For an isolated test, create an empty directory first and append `--target-root "<existing-test-directory>"` to all three commands. Omit `--host codex` to install only the neutral Agent directory. Use the documented version tag and verify its commit plus the installed file hashes. On npm 10.9.2, the shorthand with a full 40-character commit instead of the tag failed with `GitFetcher requires an Arborist constructor`; do not assume that form works on every npm version.
 
 Files go to `.agents/skills/chengfeng-videocut-cut` under the target home; Codex mode also creates a precise `.codex/skills/chengfeng-videocut-cut` entry. Identical installs are reused. A conflicting name, version or locally modified copy is rejected without overwriting it. No automatic upgrade or uninstall is provided.
 
