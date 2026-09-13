@@ -15,7 +15,7 @@
 
 只接受显式HTTP字面loopback origin（127.0.0.1或[::1]，不是localhost），拒绝外网、凭据、重定向、路径和query。不查客户端registry、不猜5190、不注册第二项目、不自动启动服务。保存产品/version/PID/build及每次source；身份变化停止重核，不能把新revision偷换进旧批准方案。
 
-写operation必须独立--confirmed，表示已有用户授权；JSON confirmed:true不能代替标志。plan JSON必须confirmed:false，不能带--confirmed。请求只放commands列出的字段，不加connection、任意URL或HTTP方法；revision/hash来自回读，operationId在明确新操作时保存，未知结果不换ID。
+写operation必须独立--confirmed，表示已有用户授权；JSON confirmed:true不能代替标志。仅 commands 中 mode:"plan" 的操作要求 JSON confirmed:false，不能带--confirmed；不要按命令名是否含 plan 推断字段。例如 export-plan 的 mode 是 "read"，请求仅允许 profile，不传 confirmed。请求只放commands列出的字段，不加connection、任意URL或HTTP方法；revision/hash来自回读，operationId在明确新操作时保存，未知结果不换ID。
 
 标准envelope为ok/data或error；业务结果位于data，写回读在data.readback，readBackVerified不等于视觉通过。export/ingest-start的admissionOnly:true、completionVerified:false仅指受理。connect返回source/capabilities，不返回项目URL。
 

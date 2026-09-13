@@ -8,17 +8,19 @@ Produce one reviewable cut ledger from real media and transcript evidence. It do
 
 ## Quick Start
 
-Source preview **0.1.0-beta.1**. Requires Node.js 18+, npm, Git and access to GitHub. These commands install Skill files only; they do not install or start a workbench. Review the package before executing it.
+Unpublished local candidate **0.1.0-beta.2**. Run in this verified source checkout with Node.js 18+. No GitHub tag or remote installation of this candidate is claimed; use an empty isolated target first. These commands install Skill files only; they do not install or start a workbench. Review the package before executing it.
 
 ```sh
-npx -y github:Agentchengfeng/chengfeng-videocut-cut#v0.1.0-beta.1 plan --host codex
-npx -y github:Agentchengfeng/chengfeng-videocut-cut#v0.1.0-beta.1 install --host codex
-npx -y github:Agentchengfeng/chengfeng-videocut-cut#v0.1.0-beta.1 doctor --host codex
+node bin/install.cjs plan --host codex --target-root "<existing-test-directory>"
+node bin/install.cjs install --host codex --target-root "<existing-test-directory>"
+node bin/install.cjs doctor --host codex --target-root "<existing-test-directory>"
 ```
 
-The default target is your user home. For an isolated test, create an empty directory first and append `--target-root "<existing-test-directory>"` to all three commands. Omit `--host codex` to install only the neutral Agent directory. Use the documented version tag and verify its commit plus the installed file hashes. On npm 10.9.2, the shorthand with a full 40-character commit instead of the tag failed with `GitFetcher requires an Arborist constructor`; do not assume that form works on every npm version.
+The default target is your user home. For an isolated test, create an empty directory first and include `--target-root "<existing-test-directory>"` in all three commands. Omit `--host codex` to install only the neutral Agent directory. For published versions, use the documented version tag and verify its commit plus the installed file hashes. On npm 10.9.2, the shorthand with a full 40-character commit instead of the tag failed with `GitFetcher requires an Arborist constructor`; do not assume that form works on every npm version.
 
-Files go to `.agents/skills/chengfeng-videocut-cut` under the target home; Codex mode also creates a precise `.codex/skills/chengfeng-videocut-cut` entry. Identical installs are reused. A conflicting name, version or locally modified copy is rejected without overwriting it. No automatic upgrade or uninstall is provided.
+Files go to `.agents/skills/chengfeng-videocut-cut` under the target home; Codex mode also creates a precise `.codex/skills/chengfeng-videocut-cut` entry. Matching ID, version and file hashes are reused. A conflicting name, version or locally modified copy is rejected without overwriting it. The local receipt does not yet store repository commit, suite ownership or Runtime compatibility. No automatic upgrade or uninstall is provided.
+
+Published preview identities are listed in [the product installation guide](https://github.com/Agentchengfeng/chengfeng-videocut/blob/main/INSTALL.md#verified-preview-commits). That table records verified tag-to-commit mappings, not a signed release or a compatible full-suite manifest. Local candidates are not covered by those published identities.
 
 ## Use with an Agent
 

@@ -1,6 +1,6 @@
 {
   "name": "chengfeng-videocut-cut",
-  "version": "0.1.0-beta.1",
+  "version": "0.1.0-beta.2",
   "private": true,
   "description": "识别口误、重复与多次 take，生成可审核的删词方案。",
   "license": "Apache-2.0",
@@ -12,7 +12,8 @@
     "node": ">=18"
   },
   "chengfengDistribution": {
-    "channel": "github-preview"
+    "channel": "github-preview",
+    "status": "local-candidate"
   },
   "files": [
     "README.md",

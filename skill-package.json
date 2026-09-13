@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "id": "chengfeng-videocut-cut",
-  "version": "0.1.0-beta.1",
+  "version": "0.1.0-beta.2",
   "skillPath": ".agents/skills/chengfeng-videocut-cut",
   "files": {
-    "CITATION.cff": "0f50fdfeb1e2c03b0242f1875c9d08ffe4c9f9d76fe4f109fc6d57405557e15f",
+    "CITATION.cff": "5a6df7f76f38e742e5f3f49dce681387dbd74eead19ee0cd1201035eda4e9a1d",
     "LICENSE": "4259155fb06f127687ee7b0a8a3682d45132db0f2da26cbc0b7a2d1e796436b8",
     "NOTICE.md": "26f3e49eb2e2b5b1c7cbec485d9695a60b71fae3ebbd8f8d468eee323e4526b2",
     "SKILL.md": "9627ba040018bcff5c224c8b815c8285a1ce70aa32741fa3913d3b4fadbd67f5",
@@ -17,8 +17,8 @@
     "references/shared/media-assets.md": "af5b42bf17729167413137f92f93dff7581fd5efb497d294a4cee10aac8f97b5",
     "references/shared/module-publish.md": "86bc57dc5faafd1581aff3c80c4994dce16522fb542fb1bbe8345478fe2fb8da",
     "references/shared/plugin-access.md": "fc7c42d6d9b56f2a83b898c992f5eef27b965481efe997b3690eb1ad499cc22a",
-    "references/shared/provenance.json": "f30d91f39bdbd79591d1c8facddd82634e512538b693ef15221e86924b21fee7",
-    "references/shared/runtime-cli.md": "d4ad73ec1dad054eb3413e8622b7d3b9c0bf84a0c3109aa40cf0d9c09a87c6a4",
+    "references/shared/provenance.json": "beacbb9e4eb1392f994da254b1f543957a522cb5333fec5ff40474b5e2daaa55",
+    "references/shared/runtime-cli.md": "d6e40ea6dcb938e2a6d2875b4ce3ae374b814a02c844d197ac61cf9adcb23c28",
     "references/shared/visual-integration.md": "dc47c21bfcf99422cd08302be91237faebaab11897951a7bb3834f61388b72d1",
     "references/shared/visual-module-contract.md": "a63d4e688599ea44207cd734b1afea518931127f199b4629093dad56af5d665b"
   },
@@ -32,9 +32,7 @@
     "notes": "Check actual workbench commands and endpoint capabilities; version alone is not sufficient."
   },
   "publication": {
-    "status": "github-source-preview",
-    "ref": "v0.1.0-beta.1",
-    "verification": "see-external-publication-receipt",
+    "status": "local-candidate",
     "repository": "Agentchengfeng/chengfeng-videocut-cut",
     "remoteCommit": null,
     "licenseReview": "project-license-retained",
