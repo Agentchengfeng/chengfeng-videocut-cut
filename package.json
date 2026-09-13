@@ -1,0 +1,42 @@
+{
+  "name": "chengfeng-videocut-cut",
+  "version": "0.1.0-beta.1",
+  "private": true,
+  "description": "识别口误、重复与多次 take，生成可审核的删词方案。",
+  "license": "Apache-2.0",
+  "author": "成峰 / AI产品自由",
+  "bin": {
+    "chengfeng-videocut-cut": "bin/install.cjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "chengfengDistribution": {
+    "channel": "github-preview"
+  },
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "skill-package.json",
+    "PUBLISHING.md",
+    "LICENSE",
+    "NOTICE.md",
+    "CITATION.cff",
+    "bin/install.cjs",
+    "bin/check-package.cjs",
+    ".agents/skills/chengfeng-videocut-cut"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Agentchengfeng/chengfeng-videocut-cut.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Agentchengfeng/chengfeng-videocut-cut/issues"
+  },
+  "homepage": "https://github.com/Agentchengfeng/chengfeng-videocut-cut#readme",
+  "scripts": {
+    "test": "node bin/install.cjs help",
+    "check:package": "node bin/check-package.cjs check",
+    "check:upload": "node bin/check-package.cjs upload"
+  }
+}
